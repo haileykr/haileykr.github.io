@@ -1,0 +1,32 @@
+name: Deploy to GitHub Pages
+on:
+  push:	
+    branches:	
+      - main
+
+jobs:
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+    - uses: actions/checkout@main
+    - name: Use Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16.x
+    - name: npm install and build
+      env:
+        REACT_APP_BASE_URL: https://haileykr.github.io/me
+      run: |
+        npm install
+        npm run build
+
+    - name: Deploy
+      uses: s0/git-publish-subdir-action@develop
+      env:
+        REPO: self
+        BRANCH: gh-pages
+        FOLDER: build
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
