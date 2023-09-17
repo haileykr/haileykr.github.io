@@ -9,7 +9,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import AdbIcon from "@mui/icons-material/Adb";
 import { styled } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
 
@@ -39,7 +38,7 @@ const Appbar = () => {
             variant="h6"
             noWrap
             component="a"
-            href="/"
+            href={process.env.REACT_APP_BASE_URL}
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -95,7 +94,7 @@ const Appbar = () => {
             variant="h5"
             noWrap
             component="a"
-            href="/"
+            href={process.env.REACT_APP_BASE_URL}
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
