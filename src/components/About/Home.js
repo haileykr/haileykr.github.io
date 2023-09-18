@@ -12,7 +12,7 @@ import { openInNewTab } from "../../utils/onClickUrl";
 
 const Home = ({ langChoice }) => {
   return (
-    <Grid container spacing={2} sx={{ pt: "68.5px" }}>
+    <Grid container spacing={2} sx={{ mt: "68.5px" }}>
       <IntroductionGrid item xs={12} sm={7}>
         <IntroductionContainer elevation={0}>
           <h2>
@@ -50,7 +50,7 @@ const Home = ({ langChoice }) => {
       </IntroductionGrid>
       <IntroductionGrid item xs={12} sm={5}>
         <ProfileImage
-          src={`${process.env.REACT_APP_BASE_URL}/images/avatars/1.png`}
+          src={`${process.env.REACT_APP_BASE_URL}/images/avatars/avatar_gif.gif`}
           id="profile"
           alt="profile"
         />
