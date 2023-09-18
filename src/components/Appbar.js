@@ -49,7 +49,7 @@ const Appbar = () => {
               textDecoration: "none",
             }}
           >
-            🌞H²
+            ☀️H²
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -106,7 +106,7 @@ const Appbar = () => {
               textDecoration: "none",
             }}
           >
-            🌞H²
+            ☀️H²
           </Typography>
           <Box
             sx={{
