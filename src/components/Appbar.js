@@ -30,7 +30,7 @@ const Appbar = () => {
   };
 
   return (
-    <CustomAppBar position="static">
+    <CustomAppBar>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <AdbIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
@@ -133,8 +133,11 @@ const Appbar = () => {
 export default Appbar;
 
 const CustomAppBar = styled(AppBar)(({ theme }) => ({
+  // position: "static",
+  position: "fixed",
   width: "100vw",
-  backgroundColor: "rgba(255, 255, 255, 0.5)",
+  // backgroundColor: "rgba(255, 222, 89, 0.4)",
+  backgroundColor: "rgba(255, 255, 255, 0.95)",
   color: theme.palette.text.secondary,
   "& button": {
     color: theme.palette.text.secondary,

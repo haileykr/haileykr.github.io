@@ -12,7 +12,7 @@ import { openInNewTab } from "../../utils/onClickUrl";
 
 const Home = ({ langChoice }) => {
   return (
-    <Grid container spacing={2}>
+    <Grid container spacing={2} sx={{ pt: "68.5px" }}>
       <IntroductionGrid item xs={12} sm={7}>
         <IntroductionContainer elevation={0}>
           <h2>

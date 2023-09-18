@@ -17,7 +17,7 @@ const Experience = ({ langChoice }) => {
       container
       spacing={2}
       sx={{
-        pt: "1rem",
+        pt: "90px",
         pb: "2rem",
         // backgroundColor: theme.palette.background.paperemphasis,
       }}
