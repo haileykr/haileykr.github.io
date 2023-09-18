@@ -6,6 +6,7 @@ import Home from "./components/About/Home";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
 import PortfolioTheme from "./components/PortfolioTheme";
+import Footer from "./components/Footer";
 
 function App() {
   const [langChoice, setLangChoice] = useState("en");
@@ -28,7 +29,7 @@ function App() {
             {/* <Route path="/resume" element={<Resume />} /> */}
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>
-          {/* <Footer /> */}
+          <Footer />
         </div>
       </BrowserRouter>
     </PortfolioTheme>
