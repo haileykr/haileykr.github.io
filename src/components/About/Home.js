@@ -5,10 +5,8 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import TypeWriter from "typewriter-effect";
 import TechStack from "./TechStack";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import GitHubIcon from "@mui/icons-material/GitHub";
 
-import { openInNewTab } from "../../utils/onClickUrl";
+
 
 const Home = ({ langChoice }) => {
   return (
@@ -77,14 +75,14 @@ const Home = ({ langChoice }) => {
             기술을 만들어나가는 데에 큰 열정이 있습니다.
           </div>
         )}
-        <h1>{langChoice === "en" ? "CONNECT" : "소개"}</h1>
+        {/* <h1>{langChoice === "en" ? "CONNECT" : "소개"}</h1>
         {langChoice === "en" && (
           <div id="connectText">
             Feel free to connect with me! I am always excited to talk to others,
             whether it's about exciting projects or just a friendly chat!
           </div>
-        )}
-        <SocialMediaContainer>
+        )} */}
+        {/* <SocialMediaContainer>
           <IconButton
             aria-label="LinkedIn"
             size="large"
@@ -94,7 +92,6 @@ const Home = ({ langChoice }) => {
           >
             <LinkedInIcon fontSize="large" />
           </IconButton>
-
           <IconButton
             aria-label="Github"
             size="large"
@@ -102,7 +99,8 @@ const Home = ({ langChoice }) => {
           >
             <GitHubIcon fontSize="large" />
           </IconButton>
-        </SocialMediaContainer>
+        </SocialMediaContainer> */}
+        <img style={{width: "100%", height: "auto"}} src={`${process.env.REACT_APP_BASE_URL}/images/avatars/things_i_like.png`} alt="Things I Like"/>
       </AboutGrid>
       <AboutGrid item xs={12} sm={6}>
         <h1>{langChoice === "en" ? "TECH STACK" : "기술 스택"}</h1>

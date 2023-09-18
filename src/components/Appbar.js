@@ -11,6 +11,10 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { styled } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
+import { openInNewTab } from "../utils/onClickUrl";
+
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import GitHubIcon from "@mui/icons-material/GitHub";
 
 const pages = ["ABOUT", "EXPERIENCE", "EDUCATION"];
 
@@ -86,6 +90,20 @@ const Appbar = () => {
                   <Typography textAlign="center">{page}</Typography>
                 </MenuItem>
               ))}
+              <MenuItem
+                aria-label="LinkedIn"
+                onClick={() =>
+                  openInNewTab("https://www.linkedin.com/in/haileyharrykim")
+                }
+              >
+                <LinkedInIcon fontSize="large" />
+              </MenuItem>
+              <MenuItem
+                aria-label="Github"
+                onClick={() => openInNewTab("https://github.com/haileykr")}
+              >
+                <GitHubIcon fontSize="large" />
+              </MenuItem>
             </Menu>
           </Box>
 
@@ -124,6 +142,22 @@ const Appbar = () => {
                 {page}
               </Button>
             ))}
+            <Button
+              aria-label="LinkedIn"
+              onClick={() =>
+                openInNewTab("https://www.linkedin.com/in/haileyharrykim")
+              }
+              sx={{ color: "white", display: "block" }}
+            >
+              <LinkedInIcon fontSize="medium" />
+            </Button>
+            <Button
+              aria-label="Github"
+              onClick={() => openInNewTab("https://github.com/haileykr")}
+              sx={{ color: "white", display: "block" }}
+            >
+              <GitHubIcon fontSize="medium" />
+            </Button>
           </Box>
         </Toolbar>
       </Container>
@@ -133,10 +167,9 @@ const Appbar = () => {
 export default Appbar;
 
 const CustomAppBar = styled(AppBar)(({ theme }) => ({
-  // position: "static",
   position: "fixed",
   width: "100vw",
-  // backgroundColor: "rgba(255, 222, 89, 0.4)",
+  height: "68.5px",
   backgroundColor: "rgba(255, 255, 255, 0.95)",
   color: theme.palette.text.secondary,
   "& button": {
