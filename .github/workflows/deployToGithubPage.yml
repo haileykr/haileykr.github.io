@@ -18,7 +18,7 @@ jobs:
         node-version: 16.x
     - name: npm install and build
       env:
-        REACT_APP_BASE_URL: https://haileykr.github.io/me
+        REACT_APP_BASE_URL: https://haileykr.github.io
       run: |
         npm install
         npm run build
