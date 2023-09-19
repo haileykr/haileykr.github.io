@@ -1,8 +1,8 @@
 import * as React from "react";
 import Grid from "@mui/material/Grid";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import { educationList } from "../assets/data";
 import { openInNewTab } from "../utils/onClickUrl";
+import { educationList, licensesList } from "../assets/data";
 import {
   SectionTitleHeader,
   HeaderContainer,
@@ -10,22 +10,19 @@ import {
 } from "./styledComponents";
 // import { useTheme } from "@mui/material";
 
-const Education = ({ langChoice }) => {
+const Education = () => {
   // const theme = useTheme();
   return (
     <Grid
       container
       spacing={2}
       sx={{
-        pt: "90px",
         pb: "2rem",
         // backgroundColor: theme.palette.background.paperemphasis,
       }}
     >
       <Grid item xs={12} sm={12}>
-        <SectionTitleHeader>
-          {langChoice === "en" ? "EDUCATION" : "학력"}
-        </SectionTitleHeader>
+        <SectionTitleHeader>EDUCATION</SectionTitleHeader>
       </Grid>
       {educationList.map((education) => {
         return (
@@ -50,6 +47,30 @@ const Education = ({ langChoice }) => {
                 <h3>GPA: {education["GPA"]}</h3>
               </DetailsContainer>
             </Grid>
+          </Grid>
+        );
+      })}
+      <Grid item xs={12} sm={12}>
+        <SectionTitleHeader>LICENSES & CERTIFICATES</SectionTitleHeader>
+      </Grid>
+      {licensesList.map((license) => {
+        return (
+          <Grid key={license["name"]} item xs={12} sm={4}>
+            <DetailsContainer elevation={2}>
+              <h1>
+                {license["name"]}
+                {"  "}
+                {license["field"] === "Tech" ? "👩🏻‍💻" : "👷🏻‍♀️"}
+              </h1>
+              <h2>{license["issuer"]}</h2>
+              <h3>
+                Issued in {license["issued"]}
+                <OpenInNewIcon
+                  className="link-official-website"
+                  onClick={() => openInNewTab(license["official_website"])}
+                />
+              </h3>
+            </DetailsContainer>
           </Grid>
         );
       })}
