@@ -13,20 +13,21 @@ export const experienceList = [
     location: "New York, NY, USA",
     title: "Full-Stack/Software Developer",
     description: [
-      "Collaborated with AEC industry domain experts to identify opportunities for innovative digital transformation, with domain knowledge in both digital technology and structural engineering.",
       "Developed web frontend interfaces, backend structure and APIs, and CI/CD pipeline for various projects with unique client requirements.",
-      "Managed and assigned tasks to other developers and communicated with the UX team using JIRA and Figma.",
+      "Collaborated with AEC industry domain experts to identify opportunities for innovative digital transformation, with domain knowledge in both digital technology and structural engineering.",
       "Simplified and automated engineering workflows using various technology principles and stacks, including data analytics, cloud-based technologies, and Machine Learning.",
       "As the nominated Americas Software Development Champion, organize and lead nation-wide internal discussions, presentation series, and training sessions about software development technologies and various projects.",
-      "Created Python scripts to automate the generation of project deliverables based on project requirements, which include Word documents and interactive spreadsheets, utilizing DataFrames.",
+      "Managed and assigned tasks to other developers and communicated with the UX team using JIRA and Figma.",
     ],
     projects: [
-      "Developed a new virtual site inspection application powered by React and Typescript, featuring Unity WebGL and Django-based backend server, as a Lead Frontend Developer.",
-      "Architected and developed a web-based generative design tool which empowers engineers to evaluate hundreds of design options and make data-driven decisions. Created the frontend application with React and TypeScript, and a set of Azure functions to use a RhinoCompute server for cloud-based geometric computations",
-      "Maintained and implemented an automation tool powered by Apache Airflow, Kubernetes, and Django. The tool detects incoming submittals from contractors at scheduled time intervals, saves them on internal platforms, and notifies project team members of the automation status during Construction Administration (CA) phase.",
-      "Conducted a feasibility study of implementing Graph Neural Networks (GNN) to simplify building detail CAD drawings. Published an internal article to define strategies and a jumpstart system for projects requiring Object Detection.",
-      "Streamlined and maintained the existing internal global system to enable BIM modelers to adopt 20k+ pre-defined templates and families in Revit, a 3D modeling software, using services including DynamoDB, Neptune, and S3.",
-      "Developed a set of user personas, user stories, and Figma wireframes for a Structural Health Monitoring (SHM) system for an international client. Confirmed technical feasibilities, identified key data and use cases, and ideated data visualization strategies through active communication with the client, contractor, and internal teams.",
+      "Web Application|Developed a new virtual site inspection application powered by React and Typescript, featuring Unity WebGL and Django-based backend server, as a Lead Frontend Developer.",
+      "Web Application|Architected and developed a web-based generative design tool which empowers engineers to evaluate hundreds of design options and make data-driven decisions. Created the frontend application with React and TypeScript, and a set of Azure functions to use a RhinoCompute server for cloud-based geometric computations",
+      "Data Management Tool|Maintained and implemented an automation tool powered by Apache Airflow, Kubernetes, and Django. The tool detects incoming submittals from contractors at scheduled time intervals, saves them on internal platforms, and notifies project team members of the automation status during Construction Administration (CA) phase.",
+      "Data Management Tool|Streamlined and maintained the existing internal global system to enable BIM modelers to adopt 20k+ pre-defined templates and families in Revit, a 3D modeling software, using services including DynamoDB, Neptune, and S3.",
+      "Data Analysis Tool|Created Python scripts to automate the generation of project deliverables based on project requirements, which include Word documents and interactive spreadsheets, utilizing DataFrames.",
+      "ML Tool|Conducted a feasibility study of implementing Graph Neural Networks (GNN) to simplify building detail CAD drawings.",
+      "ML Tool|Published an internal article to define strategies and a jumpstart system for projects requiring Object Detection.",
+      "UX Study|Developed a set of user personas, user stories, and Figma wireframes for a Structural Health Monitoring (SHM) system for an international client. Confirmed technical feasibilities, identified key data and use cases, and ideated data visualization strategies through active communication with the client, contractor, and internal teams.",
     ],
   },
   {
@@ -39,7 +40,7 @@ export const experienceList = [
     title: "Software Engine Development Intern",
     description: [
       "Developed and maintained the cloud-based software tool to help online sellers streamline and automate the management processes for products, stock, and orders across 200+ domestic/international online shopping mall platforms.",
-      "Created pipelines for newly supported e-commerce platforms by connecting their APIs to PlayAuto’s software logic.",
+      "Created pipelines for newly supported e-commerce platforms by connecting their APIs to PlayAuto’s software logic, using TypeScript and Jest.js.",
       "Established the new intern onboarding program and trained new interns in person.",
     ],
   },
@@ -67,7 +68,7 @@ export const experienceList = [
     location: "New York, NY, USA",
     title: "Structural Engineer / Senior Structural Engineer",
     description: [
-      "Analyzed more than 30 existing and new structures based on their geometry, structural layout, load assumptions, material properties, and site location and condition through hand calculations, and FEM analyses.",
+      "Analyzed more than 30 existing and new structures based on their geometry, structural layout, load assumptions, material properties, and site location and condition through hand calculations, FEM analyses, and Python/Grasshopper scripts.",
       "Major projects included Sunnyside Master Plan (180-acre City Redevelopment Project) and 241 W28 (479-unit Residential/Commercial Building).",
       "Generated detailed sketches and drawing sets for coordination and construction.",
       "Coordinated with clients, architects, and other consultants worldwide to develop design.",
@@ -168,5 +169,66 @@ export const educationListKo = [
     period: "[2009.02 ~ 2012.03]",
     title: "민족사관고등학교 (KMLA) - 대한민국",
     degree: "",
+  },
+];
+
+export const licensesList = [
+  {
+    issued: "2020.01",
+    name: "Professional Engineer (P.E.)",
+    issuer:
+      "Board for Professional Engineers, Land Surveyors, and Geologists (California)",
+    field: "Architecture, Engineering, & Construction",
+    official_website: "https://www.bpelsg.ca.gov/",
+  },
+  {
+    issued: "2018.11",
+    name: "LEED AP Building Design + Construction",
+    issuer: "Green Building Certification Inc. (GBCI)",
+    field: "Architecture, Engineering, & Construction",
+    official_website: "https://www.usgbc.org/credentials/leed-ap",
+  },
+  {
+    issued: "2023.07",
+    name: "Azure Fundamentals",
+    issuer: "Microsoft",
+    field: "Tech",
+    official_website:
+      "https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/",
+  },
+];
+
+export const otherExperienceList = [
+  {
+    period: "2023.02 - Present",
+    name: "Arup",
+    role: "Software Skills Network Champion, Forum Speaker",
+    location: "New York, NY, USA",
+    description: [
+      "Organize monthly meetings on digital projects with different themes, by curating contents and reaching out to potential presenters.",
+      "Provide bursts on projects and initiatives in various meetings.",
+      "Presented on a Generative Design Applicatoin at an internal, national forum with 50+ attendees from diverse disciplines.",
+    ],
+  },
+  {
+    period: "2022.11",
+    name: "AECTech 2022",
+    role: "Hackathon",
+    location: "New York, NY, USA",
+    description: [
+      "Developed a web-based application which visualizes the businesses within a 5 or 10 minute walk of the given location in NYC.",
+      "Participated as a frontend developer and a data analysist.",
+    ],
+    official_website: "https://github.com/EmptyBox-Design/project-vibe",
+  },
+  {
+    period: "2019.04 - Present",
+    name: "Cooper Union",
+    role: "Guest Lecturer",
+    location: "New York, NY, USA",
+    description: [
+      "Give lectures on structural engineering fundamentals, computational design, and Building Information Modeling (BIM) to seniors.",
+      "Join senior design classes to provide constructive feedback to students and help them develop their engineering projects",
+    ],
   },
 ];
