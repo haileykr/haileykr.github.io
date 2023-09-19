@@ -9,23 +9,16 @@ import PortfolioTheme from "./components/PortfolioTheme";
 import Footer from "./components/Footer";
 
 function App() {
-  const [langChoice, setLangChoice] = useState("en");
-
   return (
     <PortfolioTheme>
       <BrowserRouter>
-        <Appbar langChoice={langChoice} setLangChoice={setLangChoice} />
         <div className="App">
+          <Appbar />
+
           <Routes>
-            <Route path="/" element={<Home langChoice={langChoice} />} />
-            <Route
-              path="/experience"
-              element={<Experience langChoice={langChoice} />}
-            />
-            <Route
-              path="/education"
-              element={<Education langChoice={langChoice} />}
-            />
+            <Route path="/" element={<Home />} />
+            <Route path="/experience" element={<Experience />} />
+            <Route path="/education" element={<Education />} />
             {/* <Route path="/resume" element={<Resume />} /> */}
             <Route path="*" element={<Navigate to="/" />} />
           </Routes>

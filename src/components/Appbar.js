@@ -167,7 +167,8 @@ const Appbar = () => {
 export default Appbar;
 
 const CustomAppBar = styled(AppBar)(({ theme }) => ({
-  position: "fixed",
+  position: "sticky",
+  top: 0,
   width: "100vw",
   height: "68.5px",
   backgroundColor: "rgba(255, 255, 255, 0.95)",
