@@ -28,6 +28,7 @@ export const DetailsContainer = styled(Paper)(({ theme }) => ({
   paddingLeft: "1.5rem",
   paddingRight: "1.5rem",
   textAlign: "start",
+  lineHeight: "1.5",
   borderLeft: `5px solid ${theme.palette.yellow}`,
   boxShadow:
     "rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px",
@@ -50,6 +51,9 @@ export const DetailsContainer = styled(Paper)(({ theme }) => ({
     height: "1rem",
     cursor: "pointer",
     color: theme.palette.text.secondary,
+  },
+  "& strong": {
+    color: theme.palette.text.emphasis
   },
   "&:hover": { transform: "translateY(-5px)", transition: "0.5s" },
 }));

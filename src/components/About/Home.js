@@ -1,42 +1,32 @@
 import * as React from "react";
 import { styled } from "@mui/material/styles";
-import IconButton from "@mui/material/IconButton";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import TypeWriter from "typewriter-effect";
 import TechStack from "./TechStack";
 
-
-
-const Home = ({ langChoice }) => {
+const Home = () => {
   return (
-    <Grid container spacing={2} sx={{ mt: "68.5px" }}>
+    <Grid container spacing={2}>
       <IntroductionGrid item xs={12} sm={7}>
         <IntroductionContainer elevation={0}>
           <h2>
-            {langChoice === "en" ? "Hello! " : "안녕하세요! "}
+            Hello!{"  "}
             <span role="img" id="hand" aria-labelledby="hand">
               👋
             </span>
           </h2>
-          {langChoice === "en" ? (
-            <h1>
-              I am <strong>Hailey Kim</strong> -
-            </h1>
-          ) : (
-            <h1>
-              <strong>김해리</strong>입니다 -
-            </h1>
-          )}
+
+          <h1>
+            I am <strong>Hailey Kim</strong> -
+          </h1>
+
           <TypeWriter
             options={{
-              strings:
-                langChoice === "en"
-                  ? [
-                      "Full-Stack / Software Developer",
-                      "Professional Structural Engineer",
-                    ]
-                  : ["풀스택 / 소프트웨어 개발자", "미국 기술사 (P.E.)"],
+              strings: [
+                "Full-Stack / Software Developer",
+                "Professional Structural Engineer",
+              ],
               autoStart: true,
               loop: true,
               delay: 50,
@@ -54,27 +44,26 @@ const Home = ({ langChoice }) => {
         />
       </IntroductionGrid>
       <AboutGrid item xs={12} sm={6}>
-        <h1>{langChoice === "en" ? "ABOUT ME" : "소개"}</h1>
-        {langChoice === "en" ? (
-          <div>
-            In my current role as a <strong>Software Developer</strong>, I am
-            leading various digital projects at <strong>Arup</strong>, a
-            globally renowned engineering consulting firm. Prior to this, I
-            worked as a <strong>Licensed Structural Engineer (P.E.)</strong> in
-            prominent companies. Integrating my expertise in software
-            development with a strong engineering background, I am adept in
-            developing innovative digital solutions that align with my passion.
-          </div>
-        ) : (
-          <div>
-            현재 글로벌 엔지니어링 컨설팅 기업 <strong>아룹 (ARUP)</strong> 에서
-            <strong>풀스택/소프트웨어 개발자</strong>로, 다양한 디지털
-            프로젝트들을 이끌고 있습니다. 이전에는 <strong>미국 기술사</strong>
-            로써 창의적인 구조물을 설계하는 회사들에서 일하였습니다. 저의 공학적
-            사고능력과 컴퓨터 공학에 대한 이해도를 바탕으로, 혁신적인 디지털
-            기술을 만들어나가는 데에 큰 열정이 있습니다.
-          </div>
-        )}
+        <h1> ABOUT ME </h1>
+
+        <div>
+          In my current role as a <strong>Software Developer</strong>, I lead
+          diverse digital projects at Arup, a globally renowned engineering
+          consulting firm. <br />I wear many hats at Arup, ranging from a Lead
+          Frontend Developer in many projects, backend developer, data
+          analysist, to a srcum master and a skills network champion.
+          <br />
+          <br />
+          Prior to this, I worked as a{" "}
+          <strong>Licensed Structural Engineer (P.E.)</strong> in prominent
+          companies.
+          <br />
+          <br />
+          By integrating my software development skills with a strong
+          engineering foundation, I am adept in developing innovative digital
+          solutions that resonate with my passion.
+        </div>
+
         {/* <h1>{langChoice === "en" ? "CONNECT" : "소개"}</h1>
         {langChoice === "en" && (
           <div id="connectText">
@@ -100,10 +89,14 @@ const Home = ({ langChoice }) => {
             <GitHubIcon fontSize="large" />
           </IconButton>
         </SocialMediaContainer> */}
-        <img style={{width: "100%", height: "auto"}} src={`${process.env.REACT_APP_BASE_URL}/images/avatars/things_i_like.png`} alt="Things I Like"/>
+        <img
+          style={{ width: "100%", height: "auto" }}
+          src={`${process.env.REACT_APP_BASE_URL}/images/avatars/things_i_like.png`}
+          alt="Things I Like"
+        />
       </AboutGrid>
       <AboutGrid item xs={12} sm={6}>
-        <h1>{langChoice === "en" ? "TECH STACK" : "기술 스택"}</h1>
+        <h1>TECH STACK</h1>
         <TechStack />
       </AboutGrid>
     </Grid>
