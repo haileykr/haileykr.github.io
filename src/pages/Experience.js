@@ -1,13 +1,13 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import { experienceList, otherExperienceList } from "../assets/data";
 import { openInNewTab } from "../utils/onClickUrl";
+import { experienceList, otherExperienceList } from "../assets/data";
 import {
   SectionTitleHeader,
   HeaderContainer,
   DetailsContainer,
-} from "./styledComponents";
+} from "../components/styledComponents";
 // import Lottie from "react-lottie";
 // import * as animationData from "../assets/Se9wxzDxQr.json";
 // import { useTheme } from "@mui/material";
@@ -54,7 +54,7 @@ const Experience = () => {
                     : `url(${process.env.REACT_APP_BASE_URL}/images/bg/city-seamless-pattern_100478-1292.jpg)`,
                 backgroundRepeat: "no-repeat",
                 backgroundSize: "cover",
-                opacity: 0.15
+                opacity: 0.1
               }}
             />
             {/* {experience["name"] === "ARUP" && (

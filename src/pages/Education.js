@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import Grid from "@mui/material/Grid";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { openInNewTab } from "../utils/onClickUrl";
@@ -7,8 +7,7 @@ import {
   SectionTitleHeader,
   HeaderContainer,
   DetailsContainer,
-} from "./styledComponents";
-// import { useTheme } from "@mui/material";
+} from "../components/styledComponents";
 
 const Education = () => {
   // const theme = useTheme();
@@ -25,9 +24,25 @@ const Education = () => {
           EDUCATION
         </SectionTitleHeader>
       </Grid>
-      {educationList.map((education) => {
+      {educationList.map((education, index) => {
         return (
-          <Grid container key={education["name"]}>
+          <Grid container key={education["name"]} sx={{ position: "relative" }}>
+            <div
+              style={{
+                position: "absolute",
+                zIndex: -1,
+                width: "100%",
+                height: "100%",
+                backgroundColor: "rgba(255,255,255,0.5)",
+                backgroundImage:
+                  index < 1
+                    ? `url(${process.env.REACT_APP_BASE_URL}/images/bg/abstract-futuristic-circuit-board-pattern-illustration-free-vector.jpg)`
+                    : `url(${process.env.REACT_APP_BASE_URL}/images/bg/city-seamless-pattern_100478-1292.jpg)`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                opacity: 0.1,
+              }}
+            />
             <Grid item xs={12} sm={3}>
               <HeaderContainer>
                 <h1>{education["period"]}</h1>

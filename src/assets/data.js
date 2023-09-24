@@ -174,6 +174,14 @@ export const educationListKo = [
 
 export const licensesList = [
   {
+    issued: "2023.07",
+    name: "Azure Fundamentals",
+    issuer: "Microsoft",
+    field: "Tech",
+    official_website:
+      "https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/",
+  },
+  {
     issued: "2020.01",
     name: "Professional Engineer (P.E.)",
     issuer:
@@ -187,14 +195,6 @@ export const licensesList = [
     issuer: "Green Building Certification Inc. (GBCI)",
     field: "Architecture, Engineering, & Construction",
     official_website: "https://www.usgbc.org/credentials/leed-ap",
-  },
-  {
-    issued: "2023.07",
-    name: "Azure Fundamentals",
-    issuer: "Microsoft",
-    field: "Tech",
-    official_website:
-      "https://learn.microsoft.com/en-us/credentials/certifications/azure-fundamentals/",
   },
 ];
 

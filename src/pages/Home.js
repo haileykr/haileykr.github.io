@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import TypeWriter from "typewriter-effect";
-import TechStack from "./TechStack";
+import TechStack from "../components/TechStack";
 
 const Home = () => {
   return (
