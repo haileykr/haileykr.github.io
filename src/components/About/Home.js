@@ -25,7 +25,7 @@ const Home = () => {
             options={{
               strings: [
                 "Full-Stack / Software Developer",
-                "Professional Structural Engineer",
+                "Licensed Structural Engineer (P.E.)",
               ],
               autoStart: true,
               loop: true,
@@ -44,7 +44,7 @@ const Home = () => {
         />
       </IntroductionGrid>
       <AboutGrid item xs={12} sm={6}>
-        <h1> ABOUT ME </h1>
+        <h1 className="section-header">ABOUT ME</h1>
 
         <div>
           In my current role as a <strong>Software Developer</strong>, I lead
@@ -96,7 +96,7 @@ const Home = () => {
         />
       </AboutGrid>
       <AboutGrid item xs={12} sm={6}>
-        <h1>TECH STACK</h1>
+        <h1 className="section-header">TECH STACK</h1>
         <TechStack />
       </AboutGrid>
     </Grid>

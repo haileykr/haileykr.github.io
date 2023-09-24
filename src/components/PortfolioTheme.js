@@ -2,7 +2,7 @@ import React, { useState, useMemo, createContext } from "react";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 
 const colorPalette = {
-  yellow: "#FFDE59",
+  yellow: "#FEDB57",
   darkyellow: "F2C20A",
   pink: "#F4AFA8",
   orange: "#D1460B",

@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useEffect } from "react";
 import Grid from "@mui/material/Grid";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { openInNewTab } from "../utils/onClickUrl";
@@ -18,11 +18,12 @@ const Education = () => {
       spacing={2}
       sx={{
         pb: "2rem",
-        // backgroundColor: theme.palette.background.paperemphasis,
       }}
     >
       <Grid item xs={12} sm={12}>
-        <SectionTitleHeader>EDUCATION</SectionTitleHeader>
+        <SectionTitleHeader className="section-header">
+          EDUCATION
+        </SectionTitleHeader>
       </Grid>
       {educationList.map((education) => {
         return (
@@ -51,7 +52,9 @@ const Education = () => {
         );
       })}
       <Grid item xs={12} sm={12}>
-        <SectionTitleHeader>LICENSES & CERTIFICATES</SectionTitleHeader>
+        <SectionTitleHeader className="section-header">
+          LICENSES & CERTIFICATES
+        </SectionTitleHeader>
       </Grid>
       {licensesList.map((license) => {
         return (

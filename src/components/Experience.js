@@ -1,4 +1,4 @@
-import * as React from "react";
+import React  from "react";
 import Grid from "@mui/material/Grid";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { experienceList, otherExperienceList } from "../assets/data";
@@ -8,10 +8,20 @@ import {
   HeaderContainer,
   DetailsContainer,
 } from "./styledComponents";
+// import Lottie from "react-lottie";
+// import * as animationData from "../assets/Se9wxzDxQr.json";
 // import { useTheme } from "@mui/material";
 
 const Experience = () => {
-  // const theme = useTheme();
+  // const defaultOptions = {
+  //   loop: true,
+  //   autoplay: true,
+  //   animationData: animationData,
+  //   rendererSettings: {
+  //     preserveAspectRatio: "xMidYMid slice",
+  //   },
+  // };
+
   return (
     <Grid
       container
@@ -21,8 +31,13 @@ const Experience = () => {
       }}
     >
       <Grid item xs={12} sm={12}>
-        <SectionTitleHeader>PROFESSIONAL EXPERIENCE</SectionTitleHeader>
+        <SectionTitleHeader className="section-header">
+          PROFESSIONAL EXPERIENCE
+        </SectionTitleHeader>
       </Grid>
+      {/* <Grid container style={{position:"absolute"}}> */}
+      {/* <Lottie options={defaultOptions} width="100%" height="auto" /> */}
+      {/* </Grid> */}
       {experienceList.map((experience) => {
         return (
           <Grid container key={experience["name"]}>
@@ -70,7 +85,9 @@ const Experience = () => {
       })}
 
       <Grid item xs={12} sm={12}>
-        <SectionTitleHeader>VOLUNTEERING & CONFERENCES</SectionTitleHeader>
+        <SectionTitleHeader className="section-header">
+          VOLUNTEERING & CONFERENCES
+        </SectionTitleHeader>
       </Grid>
       {otherExperienceList.map((experience) => {
         return (

@@ -8,23 +8,23 @@ const TechStack = () => {
       <TechStackTile>
         <h2>Programming Languages</h2>
         <Button size="small" variant="contained">
-          <i class="devicon-python-plain"></i>
+          <i className="devicon-python-plain"></i>
           Python
         </Button>
         <Button size="small" variant="contained">
-          <i class="devicon-typescript-plain"></i>
+          <i className="devicon-typescript-plain"></i>
           TypeScript
         </Button>
         <Button size="small" variant="contained">
-          <i class="devicon-javascript-plain"></i>
+          <i className="devicon-javascript-plain"></i>
           JavaScript
         </Button>
         <Button size="small" variant="contained">
-          <i class="devicon-html5-plain"></i>
+          <i className="devicon-html5-plain"></i>
           HTML
         </Button>
         <Button size="small" variant="contained">
-          <i class="devicon-css3-plain"></i>
+          <i className="devicon-css3-plain"></i>
           CSS
         </Button>
         <Button size="small" variant="contained">
@@ -34,58 +34,58 @@ const TechStack = () => {
       <TechStackTile>
         <h2>Tools</h2>
         <Button size="small" variant="contained">
-          <i class="devicon-react-original"></i>
+          <i className="devicon-react-original"></i>
           React.js
         </Button>
         <Button size="small" variant="contained">
-          <i class="devicon-redux-original"></i>
+          <i className="devicon-redux-original"></i>
           Redux
         </Button>
         <Button size="small" variant="contained">
-          <i class="devicon-nodejs-plain-wordmark"></i>
+          <i className="devicon-nodejs-plain-wordmark"></i>
           Node.js
         </Button>
         <Button size="small" variant="contained">
-          <i class="devicon-express-original"></i>
+          <i className="devicon-express-original"></i>
           Express.js
         </Button>
         <Button size="small" variant="contained">
-          <i class="devicon-django-plain"></i>
+          <i className="devicon-django-plain"></i>
           Django
         </Button>
         <Button size="small" variant="contained">
-          <i class="devicon-mongodb-plain"></i>
+          <i className="devicon-mongodb-plain"></i>
           NoSQL Databases
         </Button>
         <Button size="small" variant="contained">
-          <i class="devicon-postgresql-plain"></i>
-          <i class="devicon-mysql-plain"></i>RDBMS
+          <i className="devicon-postgresql-plain"></i>
+          <i className="devicon-mysql-plain"></i>RDBMS
         </Button>
         <Button size="small" variant="contained">
-          <i class="devicon-socketio-original"></i>
+          <i className="devicon-socketio-original"></i>
           Socket.IO
         </Button>
         <Button size="small" variant="contained">
-          <i class="devicon-pytorch-original"></i>
+          <i className="devicon-pytorch-original"></i>
           PyTorch
         </Button>
       </TechStackTile>
       <TechStackTile>
         <h2>DevOps / Cloud Services</h2>
         <Button size="small" variant="contained">
-          <i class="devicon-azure-plain"></i>
+          <i className="devicon-azure-plain"></i>
           Azure
         </Button>
         <Button size="small" variant="contained">
-          <i class="devicon-amazonwebservices-original"></i>
+          <i className="devicon-amazonwebservices-original"></i>
           AWS
         </Button>
         <Button size="small" variant="contained">
-          <i class="devicon-docker-plain"></i>
+          <i className="devicon-docker-plain"></i>
           Docker
         </Button>
         <Button size="small" variant="contained">
-          <i class="devicon-github-original"></i>
+          <i className="devicon-github-original"></i>
           GitHub Actions
         </Button>
         <Button size="small" variant="contained">
@@ -95,7 +95,7 @@ const TechStack = () => {
           Airflow
         </Button>
         <Button size="small" variant="contained">
-          <i class="devicon-kubernetes-plain"></i>
+          <i className="devicon-kubernetes-plain"></i>
           Kubernetes
         </Button>
       </TechStackTile>
