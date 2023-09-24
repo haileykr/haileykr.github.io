@@ -1,4 +1,4 @@
-import React  from "react";
+import React from "react";
 import Grid from "@mui/material/Grid";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { experienceList, otherExperienceList } from "../assets/data";
@@ -17,11 +17,7 @@ const Experience = () => {
   //   loop: true,
   //   autoplay: true,
   //   animationData: animationData,
-  //   rendererSettings: {
-  //     preserveAspectRatio: "xMidYMid slice",
-  //   },
   // };
-
   return (
     <Grid
       container
@@ -35,12 +31,46 @@ const Experience = () => {
           PROFESSIONAL EXPERIENCE
         </SectionTitleHeader>
       </Grid>
-      {/* <Grid container style={{position:"absolute"}}> */}
-      {/* <Lottie options={defaultOptions} width="100%" height="auto" /> */}
-      {/* </Grid> */}
-      {experienceList.map((experience) => {
+
+      {experienceList.map((experience, index) => {
         return (
-          <Grid container key={experience["name"]}>
+          <Grid
+            container
+            key={experience["name"]}
+            sx={{
+              position: "relative",
+            }}
+          >
+            <div
+              style={{
+                position: "absolute",
+                zIndex: -1,
+                width: "100%",
+                height: "100%",
+                backgroundColor: "rgba(255,255,255,0.5)",
+                backgroundImage:
+                  index < 2
+                    ? `url(${process.env.REACT_APP_BASE_URL}/images/bg/abstract-futuristic-circuit-board-pattern-illustration-free-vector.jpg)`
+                    : `url(${process.env.REACT_APP_BASE_URL}/images/bg/city-seamless-pattern_100478-1292.jpg)`,
+                backgroundRepeat: "no-repeat",
+                backgroundSize: "cover",
+                opacity: 0.15
+              }}
+            />
+            {/* {experience["name"] === "ARUP" && (
+              <Lottie
+                style={{
+                  position: "absolute",
+                  zIndex: -1,
+                  top: "10%",
+                }}
+                options={defaultOptions}
+                // maxWidth: "100vw !important",
+                width="100%"
+                height="80%"
+              />
+            )} */}
+
             <Grid item xs={12} sm={3}>
               <HeaderContainer>
                 <h1>{experience["period"]}</h1>
