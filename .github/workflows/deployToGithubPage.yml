@@ -20,7 +20,7 @@ jobs:
       env:
         REACT_APP_BASE_URL: https://haileykr.github.io
       run: |
-        npm install
+        npm install --force
         npm run build
 
     - name: Deploy
