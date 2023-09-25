@@ -12,6 +12,7 @@ const CustomFooter = styled(Paper)(({ theme }) => ({
   borderTop: "1px dotted lightgray",
   padding: "1rem",
   marginTop: "1rem",
+  boxSizing: "border-box",
   color: theme.palette.text.secondary,
-  textAlign: "middle"
+  textAlign: "middle",
 }));

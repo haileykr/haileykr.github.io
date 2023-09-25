@@ -4,6 +4,7 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import TypeWriter from "typewriter-effect";
 import TechStack from "../components/TechStack";
+import Fade from "react-reveal";
 
 const Home = () => {
   return (
@@ -44,34 +45,35 @@ const Home = () => {
         />
       </IntroductionGrid>
       <AboutGrid item xs={12} sm={6}>
-        <h1 className="section-header">ABOUT ME</h1>
+        <Fade top>
+          <h1 className="section-header">ABOUT ME</h1>
 
-        <div>
-          In my current role as a <strong>Software Developer</strong>, I lead
-          diverse digital projects at Arup, a globally renowned engineering
-          consulting firm. <br />I wear many hats at Arup, ranging from a Lead
-          Frontend Developer in many projects, backend developer, data
-          analysist, to a srcum master and a skills network champion.
-          <br />
-          <br />
-          Prior to this, I worked as a{" "}
-          <strong>Licensed Structural Engineer (P.E.)</strong> in prominent
-          companies.
-          <br />
-          <br />
-          By integrating my software development skills with a strong
-          engineering foundation, I am adept in developing innovative digital
-          solutions that resonate with my passion.
-        </div>
+          <div>
+            In my current role as a <strong>Software Developer</strong>, I lead
+            diverse digital projects at Arup, a globally renowned engineering
+            consulting firm. <br />I wear many hats at Arup, ranging from a Lead
+            Frontend Developer in many projects, backend developer, data
+            analysist, to a srcum master and a skills network champion.
+            <br />
+            <br />
+            Prior to this, I worked as a{" "}
+            <strong>Licensed Structural Engineer (P.E.)</strong> in prominent
+            companies.
+            <br />
+            <br />
+            By integrating my software development skills with a strong
+            engineering foundation, I am adept in developing innovative digital
+            solutions that resonate with my passion.
+          </div>
 
-        {/* <h1>{langChoice === "en" ? "CONNECT" : "소개"}</h1>
+          {/* <h1>{langChoice === "en" ? "CONNECT" : "소개"}</h1>
         {langChoice === "en" && (
           <div id="connectText">
             Feel free to connect with me! I am always excited to talk to others,
             whether it's about exciting projects or just a friendly chat!
           </div>
         )} */}
-        {/* <SocialMediaContainer>
+          {/* <SocialMediaContainer>
           <IconButton
             aria-label="LinkedIn"
             size="large"
@@ -89,6 +91,7 @@ const Home = () => {
             <GitHubIcon fontSize="large" />
           </IconButton>
         </SocialMediaContainer> */}
+        </Fade>
         <img
           style={{ width: "100%", height: "auto" }}
           src={`${process.env.REACT_APP_BASE_URL}/images/avatars/things_i_like.png`}
@@ -96,7 +99,9 @@ const Home = () => {
         />
       </AboutGrid>
       <AboutGrid item xs={12} sm={6}>
-        <h1 className="section-header">TECH STACK</h1>
+        <Fade top>
+          <h1 className="section-header">TECH STACK</h1>
+        </Fade>
         <TechStack />
       </AboutGrid>
     </Grid>
