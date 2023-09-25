@@ -19,6 +19,7 @@ jobs:
     - name: npm install and build
       env:
         REACT_APP_BASE_URL: https://haileykr.github.io
+        GENERATE_SOURCEMAP: false
       run: |
         npm install --force
         npm run build
