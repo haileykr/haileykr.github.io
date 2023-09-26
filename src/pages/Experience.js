@@ -8,17 +8,9 @@ import {
   HeaderContainer,
   DetailsContainer,
 } from "../components/styledComponents";
-import Fade from "react-reveal";
-// import Lottie from "react-lottie";
-// import * as animationData from "../assets/Se9wxzDxQr.json";
-// import { useTheme } from "@mui/material";
+import { Slide } from "react-awesome-reveal";
 
 const Experience = () => {
-  // const defaultOptions = {
-  //   loop: true,
-  //   autoplay: true,
-  //   animationData: animationData,
-  // };
   return (
     <Grid
       container
@@ -28,13 +20,12 @@ const Experience = () => {
       }}
     >
       <Grid item xs={12} sm={12}>
-        <Fade top>
+        <Slide direction="down">
           <SectionTitleHeader className="section-header">
             PROFESSIONAL EXPERIENCE
           </SectionTitleHeader>
-        </Fade>
+        </Slide>
       </Grid>
-
       {experienceList.map((experience, index) => {
         return (
           <Grid
@@ -60,31 +51,18 @@ const Experience = () => {
                 opacity: 0.1,
               }}
             />
-            {/* {experience["name"] === "ARUP" && (
-              <Lottie
-                style={{
-                  position: "absolute",
-                  zIndex: -1,
-                  top: "10%",
-                }}
-                options={defaultOptions}
-                // maxWidth: "100vw !important",
-                width="100%"
-                height="80%"
-              />
-            )} */}
 
             <Grid item xs={12} sm={3}>
-              <Fade top>
+              <Slide direction="down">
                 <HeaderContainer>
                   <h1>{experience["period"]}</h1>
                   <h2>{experience["location"]}</h2>
                   <img src={experience["img"]} alt={experience["alt"]} />
                 </HeaderContainer>
-              </Fade>
+              </Slide>
             </Grid>
             <Grid item xs={12} sm={9}>
-              <Fade top>
+              <Slide direction="down">
                 <DetailsContainer elevation={2}>
                   <h1>
                     {experience["name"]}
@@ -117,23 +95,22 @@ const Experience = () => {
                     </>
                   )}
                 </DetailsContainer>
-              </Fade>
+              </Slide>
             </Grid>
           </Grid>
         );
       })}
-
       <Grid item xs={12} sm={12}>
-        <Fade top>
+        <Slide direction="down">
           <SectionTitleHeader className="section-header">
             VOLUNTEERING & CONFERENCES
           </SectionTitleHeader>
-        </Fade>
+        </Slide>
       </Grid>
       {otherExperienceList.map((experience) => {
         return (
           <Grid key={experience["name"]} item xs={12} sm={4}>
-            <Fade top>
+            <Slide direction="down">
               <DetailsContainer elevation={2}>
                 <h1>{experience["name"]}</h1>
                 <h2>{experience["role"]}</h2>
@@ -155,7 +132,7 @@ const Experience = () => {
                   })}
                 </ul>
               </DetailsContainer>
-            </Fade>
+            </Slide>
           </Grid>
         );
       })}

@@ -4,7 +4,7 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import TypeWriter from "typewriter-effect";
 import TechStack from "../components/TechStack";
-import Fade from "react-reveal";
+import { Slide } from "react-awesome-reveal";
 
 const Home = () => {
   return (
@@ -17,11 +17,9 @@ const Home = () => {
               👋
             </span>
           </h2>
-
           <h1>
             I am <strong>Hailey Kim</strong> -
           </h1>
-
           <TypeWriter
             options={{
               strings: [
@@ -45,9 +43,8 @@ const Home = () => {
         />
       </IntroductionGrid>
       <AboutGrid item xs={12} sm={6}>
-        <Fade top>
+        <Slide direction="down">
           <h1 className="section-header">ABOUT ME</h1>
-
           <div>
             In my current role as a <strong>Software Developer</strong>, I lead
             diverse digital projects at Arup, a globally renowned engineering
@@ -65,33 +62,7 @@ const Home = () => {
             engineering foundation, I am adept in developing innovative digital
             solutions that resonate with my passion.
           </div>
-
-          {/* <h1>{langChoice === "en" ? "CONNECT" : "소개"}</h1>
-        {langChoice === "en" && (
-          <div id="connectText">
-            Feel free to connect with me! I am always excited to talk to others,
-            whether it's about exciting projects or just a friendly chat!
-          </div>
-        )} */}
-          {/* <SocialMediaContainer>
-          <IconButton
-            aria-label="LinkedIn"
-            size="large"
-            onClick={() =>
-              openInNewTab("https://www.linkedin.com/in/haileyharrykim")
-            }
-          >
-            <LinkedInIcon fontSize="large" />
-          </IconButton>
-          <IconButton
-            aria-label="Github"
-            size="large"
-            onClick={() => openInNewTab("https://github.com/haileykr")}
-          >
-            <GitHubIcon fontSize="large" />
-          </IconButton>
-        </SocialMediaContainer> */}
-        </Fade>
+        </Slide>
         <img
           style={{ width: "100%", height: "auto" }}
           src={`${process.env.REACT_APP_BASE_URL}/images/avatars/things_i_like.png`}
@@ -99,9 +70,9 @@ const Home = () => {
         />
       </AboutGrid>
       <AboutGrid item xs={12} sm={6}>
-        <Fade top>
+        <Slide direction="down">
           <h1 className="section-header">TECH STACK</h1>
-        </Fade>
+        </Slide>
         <TechStack />
       </AboutGrid>
     </Grid>
@@ -159,6 +130,7 @@ const AboutGrid = styled(Grid)(({ theme }) => ({
   "& h1": {
     fontFamily: '"Cabin Sketch", "Nanum Gothic", cursive',
     fontSize: "2.5rem",
+    textAlign: "center",
   },
   "& > div": {
     width: "100%",
@@ -175,14 +147,5 @@ const AboutGrid = styled(Grid)(({ theme }) => ({
   "& #connectText": {
     paddingBottom: 0,
     marginBottom: "1rem",
-  },
-}));
-
-const SocialMediaContainer = styled("div")(({ theme }) => ({
-  display: "flex !important",
-  justifyContent: "center",
-  alignItems: "center",
-  "& a": {
-    display: "inline-block",
   },
 }));

@@ -9,7 +9,7 @@ import {
   HeaderContainer,
   DetailsContainer,
 } from "../components/styledComponents";
-import Fade from "react-reveal";
+import { Slide } from "react-awesome-reveal";
 
 const Education = () => {
   return (
@@ -21,11 +21,11 @@ const Education = () => {
       }}
     >
       <Grid item xs={12} sm={12}>
-        <Fade top>
+        <Slide direction="down">
           <SectionTitleHeader className="section-header">
             EDUCATION
           </SectionTitleHeader>
-        </Fade>
+        </Slide>
       </Grid>
       {educationList.map((education, index) => {
         return (
@@ -47,16 +47,16 @@ const Education = () => {
               }}
             />
             <Grid item xs={12} sm={3}>
-              <Fade top>
+              <Slide direction="down">
                 <HeaderContainer>
                   <h1>{education["period"]}</h1>
                   <h2>{education["location"]}</h2>
                   <img src={education["img"]} alt={education["alt"]} />
                 </HeaderContainer>
-              </Fade>
+              </Slide>
             </Grid>
             <Grid item xs={12} sm={9}>
-              <Fade top>
+              <Slide direction="down">
                 <DetailsContainer elevation={2}>
                   <h1>
                     {education["name"]}
@@ -70,22 +70,22 @@ const Education = () => {
                   <h2>{education["degree"]}</h2>
                   <h3>GPA: {education["GPA"]}</h3>
                 </DetailsContainer>
-              </Fade>
+              </Slide>
             </Grid>
           </Grid>
         );
       })}
       <Grid item xs={12} sm={12}>
-        <Fade top>
+        <Slide direction="down">
           <SectionTitleHeader className="section-header">
             LICENSES & CERTIFICATES
           </SectionTitleHeader>
-        </Fade>
+        </Slide>
       </Grid>
       {licensesList.map((license) => {
         return (
           <Grid key={license["name"]} item xs={12} sm={4}>
-            <Fade top>
+            <Slide direction="down">
               <DetailsContainer elevation={2}>
                 <h1>
                   {license["name"]}
@@ -101,7 +101,7 @@ const Education = () => {
                   />
                 </h3>
               </DetailsContainer>
-            </Fade>
+            </Slide>
           </Grid>
         );
       })}

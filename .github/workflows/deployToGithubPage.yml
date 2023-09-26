@@ -21,7 +21,7 @@ jobs:
         REACT_APP_BASE_URL: https://haileykr.github.io
         GENERATE_SOURCEMAP: false
       run: |
-        npm install --force
+        npm install
         npm run build
 
     - name: Deploy
