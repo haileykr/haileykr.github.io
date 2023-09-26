@@ -4,7 +4,7 @@ import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import TypeWriter from "typewriter-effect";
 import TechStack from "../components/TechStack";
-import { Slide } from "react-awesome-reveal";
+import { Bounce } from "react-awesome-reveal";
 
 const Home = () => {
   return (
@@ -43,7 +43,8 @@ const Home = () => {
         />
       </IntroductionGrid>
       <AboutGrid item xs={12} sm={6}>
-        <Slide direction="down">
+        {/* <Bounce direction="down"> */}
+        <Bounce>
           <h1 className="section-header">ABOUT ME</h1>
           <div>
             In my current role as a <strong>Software Developer</strong>, I lead
@@ -62,7 +63,7 @@ const Home = () => {
             engineering foundation, I am adept in developing innovative digital
             solutions that resonate with my passion.
           </div>
-        </Slide>
+        </Bounce>
         <img
           style={{ width: "100%", height: "auto" }}
           src={`${process.env.REACT_APP_BASE_URL}/images/avatars/things_i_like.png`}
@@ -70,9 +71,9 @@ const Home = () => {
         />
       </AboutGrid>
       <AboutGrid item xs={12} sm={6}>
-        <Slide direction="down">
+        <Bounce>
           <h1 className="section-header">TECH STACK</h1>
-        </Slide>
+        </Bounce>
         <TechStack />
       </AboutGrid>
     </Grid>
@@ -82,7 +83,7 @@ const Home = () => {
 export default Home;
 
 const IntroductionGrid = styled(Grid)(({ theme }) => ({
-  height: "90vh",
+  height: "90dvh",
   backgroundColor: theme.palette.background.paperemphasis,
   display: "flex",
 }));
@@ -130,6 +131,7 @@ const AboutGrid = styled(Grid)(({ theme }) => ({
   "& h1": {
     fontFamily: '"Cabin Sketch", "Nanum Gothic", cursive',
     fontSize: "2.5rem",
+    marginBottom: 0,
     textAlign: "center",
   },
   "& > div": {

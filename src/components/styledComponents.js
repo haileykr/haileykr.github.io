@@ -61,4 +61,5 @@ export const DetailsContainer = styled(Paper)(({ theme }) => ({
 export const SectionTitleHeader = styled("h1")({
   fontFamily: '"Cabin Sketch", "Nanum Gothic", cursive',
   fontSize: "2.5rem",
+  marginBottom: 0
 });

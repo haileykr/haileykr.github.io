@@ -1,6 +1,7 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import { Slide, Zoom } from "react-awesome-reveal";
 
 import { openInNewTab } from "../utils/onClickUrl";
 import { educationList, licensesList } from "../assets/data";
@@ -9,7 +10,6 @@ import {
   HeaderContainer,
   DetailsContainer,
 } from "../components/styledComponents";
-import { Slide } from "react-awesome-reveal";
 
 const Education = () => {
   return (
@@ -85,7 +85,7 @@ const Education = () => {
       {licensesList.map((license) => {
         return (
           <Grid key={license["name"]} item xs={12} sm={4}>
-            <Slide direction="down">
+            <Zoom  >
               <DetailsContainer elevation={2}>
                 <h1>
                   {license["name"]}
@@ -101,7 +101,7 @@ const Education = () => {
                   />
                 </h3>
               </DetailsContainer>
-            </Slide>
+            </Zoom>
           </Grid>
         );
       })}
