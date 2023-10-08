@@ -1,15 +1,10 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import OpenInNewIcon from "@mui/icons-material/OpenInNew";
-import { Slide, Zoom } from "react-awesome-reveal";
-
-import { openInNewTab } from "../utils/onClickUrl";
+import { Slide } from "react-awesome-reveal";
 import { educationList, licensesList } from "../assets/data";
-import {
-  SectionTitleHeader,
-  HeaderContainer,
-  DetailsContainer,
-} from "../components/styledComponents";
+import { SectionTitleHeader } from "../components/styledComponents";
+import EducationCard from "../components/EducationCard";
+import LicenseCard from "../components/LicenseCard";
 
 const Education = () => {
   return (
@@ -27,54 +22,13 @@ const Education = () => {
           </SectionTitleHeader>
         </Slide>
       </Grid>
-      {educationList.map((education, index) => {
-        return (
-          <Grid container key={education["name"]} sx={{ position: "relative" }}>
-            <div
-              style={{
-                position: "absolute",
-                zIndex: -1,
-                width: "100%",
-                height: "100%",
-                backgroundColor: "rgba(255,255,255,0.5)",
-                backgroundImage:
-                  index < 1
-                    ? `url(${process.env.REACT_APP_BASE_URL}/images/bg/abstract-futuristic-circuit-board-pattern-illustration-free-vector.jpg)`
-                    : `url(${process.env.REACT_APP_BASE_URL}/images/bg/city-seamless-pattern_100478-1292.jpg)`,
-                backgroundRepeat: "no-repeat",
-                backgroundSize: "cover",
-                opacity: 0.1,
-              }}
-            />
-            <Grid item xs={12} sm={3}>
-              <Slide direction="down">
-                <HeaderContainer>
-                  <h1>{education["period"]}</h1>
-                  <h2>{education["location"]}</h2>
-                  <img src={education["img"]} alt={education["alt"]} />
-                </HeaderContainer>
-              </Slide>
-            </Grid>
-            <Grid item xs={12} sm={9}>
-              <Slide direction="down">
-                <DetailsContainer elevation={2}>
-                  <h1>
-                    {education["name"]}
-                    <OpenInNewIcon
-                      className="link-official-website"
-                      onClick={() =>
-                        openInNewTab(education["official_website"])
-                      }
-                    />
-                  </h1>
-                  <h2>{education["degree"]}</h2>
-                  <h3>GPA: {education["GPA"]}</h3>
-                </DetailsContainer>
-              </Slide>
-            </Grid>
-          </Grid>
-        );
-      })}
+      {educationList.map((education, index) => (
+        <EducationCard
+          key={education["name"]}
+          education={education}
+          index={index}
+        />
+      ))}
       <Grid item xs={12} sm={12}>
         <Slide direction="down">
           <SectionTitleHeader className="section-header">
@@ -82,29 +36,9 @@ const Education = () => {
           </SectionTitleHeader>
         </Slide>
       </Grid>
-      {licensesList.map((license) => {
-        return (
-          <Grid key={license["name"]} item xs={12} sm={4}>
-            <Zoom  >
-              <DetailsContainer elevation={2}>
-                <h1>
-                  {license["name"]}
-                  {"  "}
-                  {license["field"] === "Tech" ? "👩🏻‍💻" : "👷🏻‍♀️"}
-                </h1>
-                <h2>{license["issuer"]}</h2>
-                <h3>
-                  Issued in {license["issued"]}
-                  <OpenInNewIcon
-                    className="link-official-website"
-                    onClick={() => openInNewTab(license["official_website"])}
-                  />
-                </h3>
-              </DetailsContainer>
-            </Zoom>
-          </Grid>
-        );
-      })}
+      {licensesList.map((license) => (
+        <LicenseCard key={license["name"]} license={license} />
+      ))}
     </Grid>
   );
 };
