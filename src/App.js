@@ -1,13 +1,13 @@
-import "./App.css";
+import "App.css";
 import React, { useRef } from "react";
 import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
-import Appbar from "./components/Appbar";
-import Home from "./pages/Home";
-import Experience from "./pages/Experience";
-import Education from "./pages/Education";
-import PortfolioTheme from "./PortfolioTheme";
-import Footer from "./components/Footer";
-import ScrollTop from "./components/ScrollTop";
+import Appbar from "components/Appbar";
+import Home from "pages/Home";
+import Experience from "pages/Experience";
+import Education from "pages/Education";
+import PortfolioTheme from "PortfolioTheme";
+import Footer from "components/Footer";
+import ScrollTop from "components/ScrollTop";
 
 function App() {
   const scrollRef = useRef(null);

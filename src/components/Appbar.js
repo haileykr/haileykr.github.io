@@ -11,7 +11,7 @@ import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import { styled } from "@mui/material/styles";
 import { useNavigate } from "react-router-dom";
-import { openInNewTab } from "../utils/onClickUrl";
+import { openInNewTab } from "utils/onClickUrl";
 
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -28,6 +28,8 @@ const Appbar = () => {
 
   const handleCloseNavMenu = (page) => {
     setAnchorElNav(null);
+
+    if (typeof page !== "string") return;
     const target = page.toLowerCase();
     if (target === "ABOUT") return navigate("/");
     return navigate(`/${target}`);
@@ -46,12 +48,8 @@ const Appbar = () => {
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
             }}
+            className="appbar-icon"
           >
             ☀️H²
           </Typography>
@@ -95,14 +93,18 @@ const Appbar = () => {
                 onClick={() =>
                   openInNewTab("https://www.linkedin.com/in/haileyharrykim")
                 }
+                className="appbar-iconbutton"
               >
-                <LinkedInIcon fontSize="large" />
+                LINKEDIN
+                {/* <LinkedInIcon fontSize="larmediumge" /> */}
               </MenuItem>
               <MenuItem
                 aria-label="Github"
                 onClick={() => openInNewTab("https://github.com/haileykr")}
+                className="appbar-iconbutton"
               >
-                <GitHubIcon fontSize="large" />
+                GITHUB
+                {/* <GitHubIcon fontSize="medium" /> */}
               </MenuItem>
             </Menu>
           </Box>
@@ -117,12 +119,10 @@ const Appbar = () => {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
+              height: "68.5px",
+              alignItems: 'center'
             }}
+            className="appbar-icon"
           >
             ☀️H²
           </Typography>
@@ -148,6 +148,7 @@ const Appbar = () => {
                 openInNewTab("https://www.linkedin.com/in/haileyharrykim")
               }
               sx={{ color: "white", display: "block" }}
+              className="appbar-iconbutton"
             >
               <LinkedInIcon fontSize="medium" />
             </Button>
@@ -155,6 +156,7 @@ const Appbar = () => {
               aria-label="Github"
               onClick={() => openInNewTab("https://github.com/haileykr")}
               sx={{ color: "white", display: "block" }}
+              className="appbar-iconbutton"
             >
               <GitHubIcon fontSize="medium" />
             </Button>
@@ -175,5 +177,18 @@ const CustomAppBar = styled(AppBar)(({ theme }) => ({
   color: theme.palette.text.secondary,
   "& button": {
     color: theme.palette.text.secondary,
+  },
+
+  "& .appbar-icon": {
+    fontFamily: "monospace",
+    fontWeight: 700,
+    letterSpacing: ".3rem",
+    color: "inherit",
+    textDecoration: "none",
+  },
+
+  "& .appbar-iconbutton": {
+    display: "flex",
+    alignItems: "center",
   },
 }));

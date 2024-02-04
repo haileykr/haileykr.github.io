@@ -1,12 +1,19 @@
 import React from "react";
-import Grid from "@mui/material/Grid";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
+import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import { Zoom } from "react-awesome-reveal";
-import { openInNewTab } from "../utils/onClickUrl";
+import { openInNewTab } from "utils/onClickUrl";
+import { HeaderContainer, DetailsContainer } from "components/styledComponents";
 import {
-  HeaderContainer,
-  DetailsContainer,
-} from "../components/styledComponents";
+  Grid,
+  Accordion,
+  AccordionDetails,
+  AccordionSummary,
+  IconButton,
+} from "@mui/material";
+
+// import CSBackground from "assets/images/bg/abstract-futuristic-circuit-board-pattern-illustration-free-vector.jpg";
+// import CivilBackground from "assets/images/bg/city-seamless-pattern_100478-1292.jpg";
 
 const ExperienceCard = ({ experience, index }) => {
   return (
@@ -23,10 +30,7 @@ const ExperienceCard = ({ experience, index }) => {
           width: "100%",
           height: "100%",
           backgroundColor: "rgba(255,255,255,0.5)",
-          backgroundImage:
-            index < 2
-              ? `url(${process.env.REACT_APP_BASE_URL}/images/bg/abstract-futuristic-circuit-board-pattern-illustration-free-vector.jpg)`
-              : `url(${process.env.REACT_APP_BASE_URL}/images/bg/city-seamless-pattern_100478-1292.jpg)`,
+          // backgroundImage: index < 2 ? { CSBackground } : { CivilBackground },
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           opacity: 0.1,
@@ -46,31 +50,52 @@ const ExperienceCard = ({ experience, index }) => {
           <DetailsContainer elevation={2}>
             <h1>
               {experience["name"]}
-              <OpenInNewIcon
-                className="link-official-website"
-                onClick={() => openInNewTab(experience["official_website"])}
-              />
+
+              <IconButton aria-label="go to button">
+                <OpenInNewIcon
+                  fontSize="small"
+                  className="link-official-website"
+                  onClick={() => openInNewTab(experience["official_website"])}
+                />
+              </IconButton>
             </h1>
             <h2>{experience["title"]}</h2>
-            <ul>
-              {experience["description"].map((desc) => {
-                return <li key={desc}>{desc}</li>;
-              })}
-            </ul>
-            {experience["projects"] && (
-              <>
-                <h4>Key Projects</h4>
+            <Accordion>
+              <AccordionSummary
+                expandIcon={<ExpandMoreIcon />}
+                aria-controls="description"
+              >
+                <b>Description</b>
+              </AccordionSummary>
+              <AccordionDetails>
                 <ul>
-                  {experience["projects"].map((project) => {
-                    return (
-                      <li key={project}>
-                        <strong>{project.split("|")[0]}</strong>
-                        {"  " + project.split("|")[1]}
-                      </li>
-                    );
+                  {experience["description"].map((desc) => {
+                    return <li key={desc}>{desc}</li>;
                   })}
                 </ul>
-              </>
+              </AccordionDetails>
+            </Accordion>
+            {experience["projects"] && (
+              <Accordion>
+                <AccordionSummary
+                  expandIcon={<ExpandMoreIcon />}
+                  aria-controls="key projects"
+                >
+                  <b>Key Projects</b>
+                </AccordionSummary>
+                <AccordionDetails>
+                  <ul>
+                    {experience["projects"].map((project) => {
+                      return (
+                        <li key={project}>
+                          <strong>{project.split("|")[0]}</strong>
+                          {"  " + project.split("|")[1]}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </AccordionDetails>
+              </Accordion>
             )}
           </DetailsContainer>
         </Zoom>

@@ -47,8 +47,6 @@ export const DetailsContainer = styled(Paper)(({ theme }) => ({
     color: theme.palette.text.secondary,
   },
   "& .link-official-website": {
-    marginLeft: "0.5rem",
-    height: "1rem",
     cursor: "pointer",
     color: theme.palette.text.secondary,
   },

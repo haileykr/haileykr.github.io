@@ -1,14 +1,15 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
+import IconButton from "@mui/material/IconButton";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { Fade, Zoom } from "react-awesome-reveal";
-import { openInNewTab } from "../utils/onClickUrl";
-import { experienceList, otherExperienceList } from "../assets/data";
-import ExperienceCard from "../components/ExperienceCard";
+import { openInNewTab } from "utils/onClickUrl";
+import { experienceList, otherExperienceList } from "assets/data";
+import ExperienceCard from "components/ExperienceCard";
 import {
   SectionTitleHeader,
   DetailsContainer,
-} from "../components/styledComponents";
+} from "components/styledComponents";
 
 const Experience = () => {
   return (
@@ -50,12 +51,15 @@ const Experience = () => {
                 <h3>
                   {experience["period"]}
                   {"official_website" in experience && (
-                    <OpenInNewIcon
-                      className="link-official-website"
-                      onClick={() =>
-                        openInNewTab(experience["official_website"])
-                      }
-                    />
+                    <IconButton aria-label="go to button">
+                      <OpenInNewIcon
+                        fontSize="small"
+                        className="link-official-website"
+                        onClick={() =>
+                          openInNewTab(experience["official_website"])
+                        }
+                      />
+                    </IconButton>
                   )}
                 </h3>
 

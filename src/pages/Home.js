@@ -3,8 +3,10 @@ import { styled } from "@mui/material/styles";
 import Paper from "@mui/material/Paper";
 import Grid from "@mui/material/Grid";
 import TypeWriter from "typewriter-effect";
-import TechStack from "../components/TechStack";
+import TechStack from "components/TechStack";
 import { Bounce } from "react-awesome-reveal";
+import AvatarGIF from "assets/images/avatars/avatar_gif.gif"
+import ThingILike from "assets/images/avatars/things_i_like.png"
 
 const Home = () => {
   return (
@@ -37,7 +39,7 @@ const Home = () => {
       </IntroductionGrid>
       <IntroductionGrid item xs={12} sm={5}>
         <ProfileImage
-          src={`${process.env.REACT_APP_BASE_URL}/images/avatars/avatar_gif.gif`}
+          src={AvatarGIF}
           id="profile"
           alt="profile"
         />
@@ -66,7 +68,7 @@ const Home = () => {
         </Bounce>
         <img
           style={{ width: "100%", height: "auto" }}
-          src={`${process.env.REACT_APP_BASE_URL}/images/avatars/things_i_like.png`}
+          src={ThingILike}
           alt="Things I Like"
         />
       </AboutGrid>

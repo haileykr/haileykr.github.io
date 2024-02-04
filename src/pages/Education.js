@@ -1,10 +1,10 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import { Slide } from "react-awesome-reveal";
-import { educationList, licensesList } from "../assets/data";
-import { SectionTitleHeader } from "../components/styledComponents";
-import EducationCard from "../components/EducationCard";
-import LicenseCard from "../components/LicenseCard";
+import { educationList, licensesList } from "assets/data";
+import { SectionTitleHeader } from "components/styledComponents";
+import EducationCard from "components/EducationCard";
+import LicenseCard from "components/LicenseCard";
 
 const Education = () => {
   return (

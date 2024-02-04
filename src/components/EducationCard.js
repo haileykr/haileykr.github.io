@@ -1,12 +1,13 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
+import IconButton from "@mui/material/IconButton";
 import OpenInNewIcon from "@mui/icons-material/OpenInNew";
 import { Zoom } from "react-awesome-reveal";
-import { openInNewTab } from "../utils/onClickUrl";
-import {
-  HeaderContainer,
-  DetailsContainer,
-} from "../components/styledComponents";
+import { openInNewTab } from "utils/onClickUrl";
+import { HeaderContainer, DetailsContainer } from "components/styledComponents";
+
+// import CSBackground from "assets/images/bg/abstract-futuristic-circuit-board-pattern-illustration-free-vector.jpg";
+// import CivilBackground from "assets/images/bg/city-seamless-pattern_100478-1292.jpg";
 
 const EducationCard = ({ education, index }) => {
   return (
@@ -18,10 +19,7 @@ const EducationCard = ({ education, index }) => {
           width: "100%",
           height: "100%",
           backgroundColor: "rgba(255,255,255,0.5)",
-          backgroundImage:
-            index < 1
-              ? `url(${process.env.REACT_APP_BASE_URL}/images/bg/abstract-futuristic-circuit-board-pattern-illustration-free-vector.jpg)`
-              : `url(${process.env.REACT_APP_BASE_URL}/images/bg/city-seamless-pattern_100478-1292.jpg)`,
+          // backgroundImage: index < 1 ? { CSBackground } : { CivilBackground },
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
           opacity: 0.1,
@@ -41,10 +39,17 @@ const EducationCard = ({ education, index }) => {
           <DetailsContainer elevation={2}>
             <h1>
               {education["name"]}
-              <OpenInNewIcon
-                className="link-official-website"
-                onClick={() => openInNewTab(education["official_website"])}
-              />
+              <IconButton
+                aria-label="go to button"
+                ml={1}
+                sx={{ aspectRatio: 1, textAlign: "center" }}
+              >
+                <OpenInNewIcon
+                  fontSize="small"
+                  className="link-official-website"
+                  onClick={() => openInNewTab(education["official_website"])}
+                />
+              </IconButton>
             </h1>
             <h2>{education["degree"]}</h2>
             <h3>GPA: {education["GPA"]}</h3>

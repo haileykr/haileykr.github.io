@@ -200,6 +200,20 @@ export const licensesList = [
 
 export const otherExperienceList = [
   {
+    period: "2023.11",
+    name: "AECTech 2023",
+    role: "Hackathon",
+    location: "New York, NY, USA",
+    description: [
+      "Designed Image Processing Workflows in Grasshopper, a parametric design tool, harnessing the potential of Computer Vision and Artificial Intelligence.",
+      "Set a mission to make powerful open-source tools in the market as accessible as possible to architects and engineers.",
+      "Successfully implement two workflows: one using OpenCV's Template Matching for a simple and lightweight solution, and the other leveraging the Segment Anything Model (SAM), an image segmentation AI model from Meta.",
+      "Participated as a Computational Engineer and a Full-Stack Developer"
+    ],
+    official_website:
+      "https://www.linkedin.com/posts/haileyharrykim_aectech2023-aectech-corestudio-activity-7127980588765962240-OKMu?utm_source=share&utm_medium=member_desktop",
+  },
+  {
     period: "2023.02 - Present",
     name: "Arup",
     role: "Software Skills Network Champion, Forum Speaker",
