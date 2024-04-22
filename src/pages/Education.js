@@ -16,11 +16,9 @@ const Education = () => {
       }}
     >
       <Grid item xs={12} sm={12}>
-        <Slide direction="down">
           <SectionTitleHeader className="section-header">
             EDUCATION
           </SectionTitleHeader>
-        </Slide>
       </Grid>
       {educationList.map((education, index) => (
         <EducationCard
@@ -30,11 +28,9 @@ const Education = () => {
         />
       ))}
       <Grid item xs={12} sm={12}>
-        <Slide direction="down">
           <SectionTitleHeader className="section-header">
             LICENSES & CERTIFICATES
           </SectionTitleHeader>
-        </Slide>
       </Grid>
       {licensesList.map((license) => (
         <LicenseCard key={license["name"]} license={license} />

@@ -174,6 +174,14 @@ export const educationListKo = [
 
 export const licensesList = [
   {
+    issued: "2024.02",
+    name: "AWS Certified Solutions Architect - Associate (SAA-C03)",
+    issuer: "AWS",
+    field: "Tech",
+    official_website:
+      "https://aws.amazon.com/certification/certified-solutions-architect-associate/",
+  },
+  {
     issued: "2023.07",
     name: "Azure Fundamentals",
     issuer: "Microsoft",
@@ -199,6 +207,16 @@ export const licensesList = [
 ];
 
 export const otherExperienceList = [
+  {
+    period: "2024.02",
+    name: "Advancing Computational Building Design 2024",
+    role: "Presenter",
+    location: "Dallas, Texas, USA",
+    description: [
+      "Presented on 'Evaluating the Most Effective Applications to Develop In-House to Maximize the Value of your Team for the Organization' on behalf of Arup Digital, sharing lessons learned and example applications from our Digital, Data & Geospatial team"
+    ],
+    official_website: "https://www.linkedin.com/posts/haileyharrykim_arup-advancingcomputationalbuildingdesign-activity-7167704021485494272-ToRg?utm_source=share&utm_medium=member_desktop",
+  },
   {
     period: "2023.11",
     name: "AECTech 2023",

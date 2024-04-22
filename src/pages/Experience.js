@@ -21,11 +21,9 @@ const Experience = () => {
       }}
     >
       <Grid item xs={12} sm={12}>
-        <Fade direction="down">
           <SectionTitleHeader className="section-header">
             PROFESSIONAL EXPERIENCE
           </SectionTitleHeader>
-        </Fade>
       </Grid>
       {experienceList.map((experience, index) => (
         <ExperienceCard
@@ -35,11 +33,9 @@ const Experience = () => {
         />
       ))}
       <Grid item xs={12} sm={12}>
-        <Fade direction="down">
           <SectionTitleHeader className="section-header">
             VOLUNTEERING & CONFERENCES
           </SectionTitleHeader>
-        </Fade>
       </Grid>
       {otherExperienceList.map((experience) => {
         return (
